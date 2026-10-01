@@ -5,7 +5,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 
 class CryptoEngine:
     """
-    CryptoShare - Core Security Engine
+    AegisVault - Core Security Engine
     Handles RSA Key Generation, AES-256 Payload Encryption, and SHA-256 Hashing.
     """
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     print("[+] Testing Crypto Engine...")
     
     # 1. Sample Data
-    original_data = b"Hello, CryptoShare E2EE File Transfer Project!"
+    original_data = b"Hello, AegisVault E2EE File Transfer Project!"
     print(f"Original Text: {original_data.decode()}")
 
     # 2. RSA Keys Setup

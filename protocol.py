@@ -3,7 +3,7 @@ import struct
 
 class Protocol:
     """
-    CryptoShare Protocol
+    AegisVault Protocol
     Packs metadata (File Name, File Size, Encrypted AES Key, IV, SHA-256) 
     along with custom binary framing so data flows without corruption over Sockets.
     """

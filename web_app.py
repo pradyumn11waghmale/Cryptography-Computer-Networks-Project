@@ -13,7 +13,7 @@ from models import db, User, Friendship
 
 # App Setup
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'cryptoshare_secret_key_123'
+app.config['SECRET_KEY'] = 'AegisVault_secret_key_123'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -54,7 +54,7 @@ LOGIN_HTML = """
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoShare - Auth Portal</title>
+    <title>AegisVault - Auth Portal</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background: #0f111a; color: #f8fafc; height: 100vh; display: flex; align-items: center; justify-content: center; }
@@ -72,7 +72,7 @@ LOGIN_HTML = """
 </head>
 <body>
     <div class="auth-card">
-        <h2 id="formTitle">CryptoShare Login</h2>
+        <h2 id="formTitle">AegisVault Login</h2>
         <form id="authForm">
             <div class="input-group">
                 <label>Username</label>
@@ -93,7 +93,7 @@ LOGIN_HTML = """
         let isLogin = true;
         function toggleAuth() {
             isLogin = !isLogin;
-            document.getElementById('formTitle').innerText = isLogin ? "CryptoShare Login" : "CryptoShare Sign Up";
+            document.getElementById('formTitle').innerText = isLogin ? "AegisVault Login" : "AegisVault Sign Up";
             document.getElementById('submitBtn').innerText = isLogin ? "Login" : "Sign Up";
             document.getElementById('toggleBtn').innerText = isLogin ? "New user? Sign Up here" : "Already have an account? Login";
         }
@@ -130,7 +130,7 @@ APP_HTML = """
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CryptoShare - E2EE Dashboard (5GB Ready)</title>
+    <title>AegisVault - E2EE Dashboard (5GB Ready)</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
@@ -191,11 +191,11 @@ APP_HTML = """
 <body>
 
     <div class="sidebar">
-        <div class="brand">🔒 CryptoShare</div>
+        <div class="brand">🔒 AegisVault</div>
         <div class="user-info">👤 Logged in: <b>{{ current_user.username }}</b></div>
         
         <div class="nav-item active" id="nav-sendTab">
-            <span>📤 Send File (Up to 5GB)</span>
+            <span>📤 Send File </span>
         </div>
         
         <div class="nav-item" id="nav-receiveTab">
